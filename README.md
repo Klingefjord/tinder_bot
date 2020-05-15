@@ -1,0 +1,3 @@
+This is what late stage quarantine looks like...
+
+Plan is to host on AWS lambda triggered every 8 hours
