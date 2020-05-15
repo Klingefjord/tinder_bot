@@ -61,15 +61,6 @@ def activate_notifications_if_needed(driver):
     else:
         print('Notifications already activated :)')
 
-def allow_popups_if_needed(driver):
-    # two alerts are expected - notifications and location data
-    for _ in range(2):
-        try:
-            WebDriverWait(driver, 3).until(EC.alert_is_present())
-            driver.switch_to_alert().accept()
-        except TimeoutException:
-            print("Couldn't find first alert, moving on...")
-
 def perform_swiping(driver, swipe_count):
     for _ in range(swipe_count):
         sleep(2)
